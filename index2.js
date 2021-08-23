@@ -13,4 +13,8 @@ const printTimes = function(times) {
 nextISSTimesForMyLocation()
   .then((times) => {
     printTimes(times.response);
+  })
+
+  .catch((error) => {
+    console.log('There was an error: ', error.message);
   });
